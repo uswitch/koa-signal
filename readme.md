@@ -82,7 +82,7 @@ as a log formatter. Creating an instance of `koa-signal` will provide
 you with a bunch of different logging functions, _e.g._
 
 ```js
-import Signal form '@uswitch/koa-signal'
+import Signal from '@uswitch/koa-signal'
 const signal = Signal({ /* config overrides */ })
 
 signal.info('My really useful info message')
