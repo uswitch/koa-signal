@@ -75,7 +75,7 @@ app.on(eventError, ({ ctx, error }) => signal.error(ctx, error.original))
 
 app.listen(3000, () => signal.start(Listening on port 3000))
 ```
-<small>**N.B.** See [`koa-core`](https://github.com/uswitch/koa-core)</small>
+<p align="center"><i>**N.B.** See [`koa-core`](https://github.com/uswitch/koa-core)</i></p>
 
 However, you can use it entirely independently of these two libraries
 as a log formatter. Creating an instance of `koa-signal` will provide
@@ -113,7 +113,7 @@ const signal = Signal({
   }
 })
 ```
-<small>**N.B.** See [`koa-core`](https://github.com/uswitch/koa-core)</small>
+<p align="center"><i>**N.B.** See [`koa-core`](https://github.com/uswitch/koa-core)</i></p>
 
 ### API
 
