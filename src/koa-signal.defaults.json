@@ -37,11 +37,10 @@
       "format": [ "level", "id", "file-name", "time-diff-init",  "time-diff-scope", "just:-", "scope", "message" ]
     },
 
-
     "error": {
       "badge": "✖",
       "labelColor": ["bgRed" , "black"],
-      "format": [ "level", "id", "message", "error" ]
+      "format": [ "level", "id", "message", "just:-", "error" ]
     },
 
     "access": {
