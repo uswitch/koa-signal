@@ -64,7 +64,7 @@
     },
 
     "file-name": {
-      "color": "green",
+      "underline": true,
       "displayFileName": false,
       "displayFormat": "@%s"
     },
@@ -112,7 +112,7 @@
 
     "access": {
       "minimumWidth": 7,
-      "displayFormat": "%s ├",
+      "displayFormat": "%s └",
       "displayMethod": false,
       "displayStatus": true,
       "color": [ ],

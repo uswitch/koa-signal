@@ -26,6 +26,8 @@ signal.trace({
   scope: 'scope'
 }, 'This is happening')
 
+signal.info({}, { code: 'ISIGNAL', property: 'Message with a property' })
+
 signal.info('This is an info message')
 signal.warn('This is a warning message')
 signal.error('Error message', new Error('This is an error'))
