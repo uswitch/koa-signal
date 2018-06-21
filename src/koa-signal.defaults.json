@@ -45,7 +45,7 @@
     },
 
     "access": {
-      "format": [ "just: 🚦", "access", "id", "access-log" ]
+      "format": [ "just:🚦 ", "access", "id", "access-log" ]
     },
 
     "summary": {
@@ -84,7 +84,7 @@
       "alignment": "left",
       "underline": true,
       "uppercase": false,
-      "displayFormat": "%s |"
+      "displayFormat": "%s │"
     },
 
     "scope": {
@@ -92,8 +92,8 @@
       "alignment": "left",
       "displayFormat": "[%s]",
       "uppercase": false,
-      "underline": true,
-      "italic": true
+      "underline": false,
+      "italic": false
     },
 
     "time-diff-init": {
@@ -111,7 +111,10 @@
     },
 
     "access": {
-      "displayFormat": "%s |",
+      "minimumWidth": 7,
+      "displayFormat": "%s ├",
+      "displayMethod": false,
+      "displayStatus": true,
       "color": [ ],
       "statusMap": {
         "200-300": { "color": ["green"], "badge":  "✔" },
