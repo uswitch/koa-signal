@@ -1,51 +1,58 @@
 {
   "levels": {
     "success": {
-      "badge": "✔",
-      "labelColor": [ "bgGreen", "black" ],
+      "badge": "✅️",
+      "label": "success",
+      "labelColor": [ "green" ],
       "format": [ "level", "id", "message" ]
     },
 
     "start": {
-      "badge": "▶",
-      "labelColor": ["bgYellow", "black"],
+      "badge": "🚀",
+      "labelColor": ["yellow"],
       "format": [ "level", "message" ]
     },
 
     "end": {
-      "badge": "■",
-      "labelColor": ["bgRed", "black"],
+      "badge": "🛑",
+      "labelColor": ["red"],
       "format": [ "level", "message" ]
     },
 
     "info": {
-      "badge": "ℹ",
-      "labelColor": ["bgBlue", "black"],
-      "format": [ "level", "id", "message" ]
+      "badge": "💬",
+      "labelColor": ["blue"],
+      "format": [ "level", "id", "file-name", "message" ]
     },
 
     "warn": {
-      "badge": "⚠",
+      "badge": "⚠️",
       "label": "warning",
-      "labelColor": ["bgYellow" , "black"],
-      "format": [ "level", "id", "message" ]
+      "labelColor": ["yellow"],
+      "format": [ "level", "id", "file-name", "message" ]
     },
 
     "trace": {
-      "badge": "❯",
-      "labelColor": ["black", "bgCyan"],
+      "badge": "⚡️",
+      "labelColor": ["blueBright"],
       "format": [ "level", "id", "file-name", "time-diff-init",  "time-diff-scope", "just:-", "scope", "message" ]
     },
 
     "error": {
-      "badge": "✖",
-      "labelColor": ["bgRed" , "black"],
-      "format": [ "level", "id", "message", "just:-", "error" ]
+      "badge": "🔥",
+      "labelColor": ["red"],
+      "format": [ "level", "id", "file-name", "message", "just:-", "error" ]
     },
 
     "access": {
-      "badge": "",
-      "format": [ "access", "id", "access-log" ]
+      "format": [ "just: 🚦", "access", "id", "access-log" ]
+    },
+
+    "summary": {
+      "badge": "🞺",
+      "label": "summary",
+      "labelColor": "bold",
+      "format": [ "level", "summary" ]
     }
   },
 
@@ -63,7 +70,7 @@
     },
 
     "error": {
-      "color": "grey",
+      "color": "dim",
       "displayStackTrace": true,
       "displayFullStackTrace": false
     },
@@ -73,44 +80,44 @@
     },
 
     "level": {
-      "minimumWidth": 12,
+      "minimumWidth": 20,
       "alignment": "left",
-      "underline": false,
-      "uppercase": true,
-      "displayFormat": "%s"
+      "underline": true,
+      "uppercase": false,
+      "displayFormat": "%s |"
     },
 
     "scope": {
-      "color": "grey",
+      "color": [ "dim" ],
       "alignment": "left",
       "displayFormat": "[%s]",
-      "uppercase": true,
-      "underline": false,
-      "italic": false
+      "uppercase": false,
+      "underline": true,
+      "italic": true
     },
 
     "time-diff-init": {
       "defaultReturn": "0ms",
-      "color": [ "bold", "magenta" ],
+      "color": [ "magenta" ],
       "minimumWidth": 10,
       "alignment": "right"
     },
 
     "time-diff-scope": {
-      "color": [ "bold", "blue" ],
+      "color": [ "blueBright" ],
       "defaultReturn": "0ms",
       "minimumWidth": 8,
       "alignment": "right"
     },
 
     "access": {
-      "minimumWidth": 12,
-      "color": [ "bgWhite", "black" ],
+      "displayFormat": "%s |",
+      "color": [ ],
       "statusMap": {
-        "200-300": { "color": ["bgGreen", "black"], "badge":  "✔" },
-        "300-400": { "color": ["bgBlue", "black"], "badge": "←" },
+        "200-300": { "color": ["green"], "badge":  "✔" },
+        "300-400": { "color": ["blue"], "badge": "←" },
         "400-500": { "badge": "⚠" },
-        "500-1000": { "color": ["bgRed", "black"], "badge": "✖" }
+        "500-1000": { "color": ["red"], "badge": "✖" }
       }
     },
 
