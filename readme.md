@@ -161,17 +161,17 @@ being used. **Components** also have their _own_ configuration defined separatel
 These functions are available _by default_ and require the following
 properties when called.
 
-| Function  | API                                                                                     |
-|-----------|-----------------------------------------------------------------------------------------|
-| `success` | `({ state: { id: STRING }, msg: STRING })`                                              |
-| `info`    | `({ state: { id: STRING }, msg: STRING })`                                              |
-| `warn`    | `({ state: { id: STRING }, msg: STRING })`                                              |
-| `access`  | `({ state: { id: STRING }, req: OBJECT, res: OBJECT }, extras: OBJECT)`                 |
-| `trace`   | `({ state: { id: STRING }, initDiff: INT, timeDiff: INT, scope: STRING, msg: STRING })` |
-| `zipkin`  | `({ state: { parent: STRING, trace: STRING }, req: OBJECT, res: OBJECT })`              |
-| `error`   | `({ state: { id: STRING }, msg: STRING }, ERROR)`                                       |
-| `start`   | `({ msg: SRTING })`                                                                     |
-| `end`     | `({ msg: STRING })`                                                                     |
+| Function  | API                                                                                             |
+|-----------|-------------------------------------------------------------------------------------------------|
+| `success` | `({ state: { id: STRING }, msg: STRING })`                                                      |
+| `info`    | `({ state: { id: STRING }, msg: STRING })`                                                      |
+| `warn`    | `({ state: { id: STRING }, msg: STRING })`                                                      |
+| `access`  | `({ state: { id: STRING }, req: OBJECT, res: OBJECT }, extras: OBJECT)`                         |
+| `trace`   | `({ state: { id: STRING }, initDiff: INT, timeDiff: INT, scope: STRING, msg: STRING })`         |
+| `zipkin`  | `({ kind: CLIENT/SERVER, state: { parent: STRING, trace: STRING }, req: OBJECT, res: OBJECT })` |
+| `error`   | `({ state: { id: STRING }, msg: STRING }, ERROR)`                                               |
+| `start`   | `({ msg: SRTING })`                                                                             |
+| `end`     | `({ msg: STRING })`                                                                             |
 
 ### Configuration
 

@@ -57,15 +57,14 @@
 
     "zipkin": {
       "components": {
-        "level": { "minimumWidth": 0, "displayFormat": "%s ┝━" },
         "id": { "displayFormat": "%s", "displayShortId": 12, "color": "dim" },
-        "access": { "displayFormat": "%s", "displayMethod": true, "displayStatus": true },
-        "access-log": { "format": ":kind :remoteEndpoint - :url :statusCode - :duration_µs" }
+        "access": { "displayFormat": "%s", "displayMethod": true, "displayStatus": true, "minimumWidth": 10 },
+        "access-log": { "format": ":remoteEndpoint - :url :statusCode - :duration_µs" }
       },
       "badge": "🛰",
       "label": "",
       "labelColor": "blue",
-      "format": [ "just:      ", "level", "access", "access-log", "just:-",  "id:parent",  "just:|",  "id:scope" ]
+      "format": [ "just:          ", "zipkin-level", "access", "access-log", "just:-",  "id:parent",  "just:|",  "id:scope" ]
     }
   },
 
@@ -98,6 +97,15 @@
       "underline": true,
       "uppercase": false,
       "displayFormat": "%s │"
+    },
+
+    "zipkin-level": {
+      "minimumWidth": 0,
+      "alignment": "right",
+      "clientIcon": "🛰",
+      "serverIcon": "📡",
+      "serverFormat": "┕━ %s ",
+      "clientFormat": "┝━ %s "
     },
 
     "scope": {
