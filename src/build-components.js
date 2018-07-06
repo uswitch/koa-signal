@@ -7,9 +7,11 @@ export const buildComponent = ({ components, levels }, level, format) => format
 
     const [componentKey, configArg] = component.split(':')
 
-    const componentF = componentMap[componentKey]
-    const componentConfig = { ...components[componentKey], configArg }
     const levelConfig = levels[level]
+    const levelComponent = (levelConfig.components || {})[componentKey]
+
+    const componentF = componentMap[componentKey]
+    const componentConfig = { ...components[componentKey], ...levelComponent, configArg }
 
     const config = { ...levelConfig, ...componentConfig }
     if (process.env.DEBUG_KOA_SIGNAL) console.log(level, component, config)
