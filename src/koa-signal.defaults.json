@@ -53,6 +53,19 @@
       "label": "summary",
       "labelColor": "bold",
       "format": [ "level", "summary" ]
+    },
+
+    "zipkin": {
+      "components": {
+        "level": { "minimumWidth": 0, "displayFormat": "%s ┝━" },
+        "id": { "displayFormat": "%s", "displayShortId": 12, "color": "dim" },
+        "access": { "displayFormat": "%s", "displayMethod": true, "displayStatus": true },
+        "access-log": { "format": ":kind :remoteEndpoint - :url :statusCode - :duration_µs" }
+      },
+      "badge": "🛰",
+      "label": "",
+      "labelColor": "blue",
+      "format": [ "just:      ", "level", "access", "access-log", "just:-",  "id:parent",  "just:|",  "id:scope" ]
     }
   },
 

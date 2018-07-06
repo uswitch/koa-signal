@@ -31,3 +31,9 @@ signal.info({}, { code: 'ISIGNAL', property: 'Message with a property' })
 signal.info('This is an info message')
 signal.warn('This is a warning message')
 signal.error('Error message', new Error('This is an error'))
+
+signal.zipkin({
+  state: { trace: '123123123', parent: '456456456', scope: '789789789' },
+  res: { statusCode: 200, duration: 1001232 },
+  req: { url: 'http://example.com/mypath', method: 'GET', kind: 'SERVER' }
+})
