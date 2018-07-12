@@ -1,6 +1,6 @@
 import { dim } from 'chalk'
 import Signal from './koa-signal.js'
-const signal = new Signal()
+const signal = new Signal({ levels: { json: { format: [ 'json' ] } } })
 
 console.log()
 console.log(dim('-- Process functions'))
@@ -48,3 +48,14 @@ signal.zipkin({
   res: { statusCode: 200, duration: 1001232 },
   req: { url: 'http://example.com/mypath', method: 'GET' }
 })
+
+console.log()
+console.log(dim('-- JSON examples'))
+
+const id = 1234567890
+const res = { time: 500, code: 200 }
+const circularJson = { id, res }
+circularJson.req = circularJson
+
+signal.json({ id, res })
+signal.json(circularJson)
